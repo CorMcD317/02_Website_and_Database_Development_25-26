@@ -31,7 +31,12 @@ h1 {
 .gcard {
     padding: 1.25rem;
     border-radius: 16px;
-    color: white;
+    color: #ffffff;
+    background: radial-gradient(60% 80% at 20% 20%, rgba(255, 255, 255, 0.3), transparent 60%),
+    linear-gradient(135deg, #0F4D92 0%, #591D35 45%, #872657 100%);
+    box-shadow: 0 6px 14px 0 rgba(0, 0, 0, .12);
+    transform: translateY(0);
+    transition: box-shadow cubic-bezier(2, 3, 4, 5), transform 250ms, filter ease-out;
 
     /* TODO 1: Add a stacked gradient background using `background-image`.
        - Use TWO gradients separated by a comma.
@@ -75,11 +80,14 @@ h1 {
        - Filter reference: https://www.w3schools.com/cssref/css3_pr_filter.php
     */
     /* transition: ... */
-
 }
+
 
 /* Hover effects */
 .gcard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 14px 0 rgba(5, 2, 3, .6);
+    filter: saturate(75%);
     /* TODO 1: Adjust the `transform` so the element appears slightly lifted.
        - Use `translateY` with a small NEGATIVE value (e.g., -4px to -10px).
        - This should be used on a hover or active state so the element moves up a bit.
